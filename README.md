@@ -16,23 +16,78 @@ To write a program to find the LU Decomposition of a matrix.
 ## Program:
 (i) To find the L and U matrix
 ```
-/*
-Program to find the L and U matrix.
-Developed by: 
-RegisterNumber: 
+/*'''Program to find L and U matrix using LU decomposition.
+
+Developed by: Niranjan p
+
+RegisterNumber:26006895 
+
+'''
+
+import os
+
+os.environ["OPENBLAS_NUM_THREADS"]="1"
+
+import numpy as np
+
+from scipy.linalg import lu
+
+a=eval(input())
+
+P,L,U =lu(a)
+
+print(L)
+
+print(U)
+
 */
 ```
 (ii) To find the LU Decomposition of a matrix
 ```
 /*
-Program to find the LU Decomposition of a matrix.
-Developed by: 
-RegisterNumber: 
+
+'''Program to solve a matrix using LU decomposition.
+
+Developed by:NIRANJAN P 
+
+RegisterNumber: 26006895
+'''
+
+# To print X matrix (solution to the equations)
+
+import os
+
+os.environ["OPENBLAS_NUM_THREADS"]="1"
+
+import numpy as np
+
+from scipy.linalg import lu_factor,lu_solve
+
+a=eval(input())
+
+b=eval(input())
+
+l,p=lu_factor(a)
+
+x=lu_solve((l,p),b)
+
+print(x)
+
 */
 ```
 
 ## Output:
 ![lu decomposition]()
+##5(a)
+<img width="1045" height="722" alt="image" src="https://github.com/user-attachments/assets/fb51b653-a423-4c69-b170-2b0de305f4ee" />
+<img width="1252" height="668" alt="image" src="https://github.com/user-attachments/assets/17659ae6-4ffb-43ce-9004-b234e8dafd65" />
+##5(b)
+<img width="780" height="722" alt="image" src="https://github.com/user-attachments/assets/0c532f13-7c3b-43e5-880a-8af279b3b688" />
+<img width="995" height="378" alt="image" src="https://github.com/user-attachments/assets/1268919b-be1a-4c42-b59a-28ef1bb47ec6" />
+
+
+
+
 
 
 ## Result:
